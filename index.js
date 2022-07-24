@@ -2,7 +2,7 @@
 
 var body = document.body,
     overlay = document.querySelector('.overlay'),
-    overlayBtts = document.querySelectorAll('button[class$="overlay"]');
+    overlayBtts = document.querySelectorAll('[class$="overlay"]');
 
 [].forEach.call(overlayBtts, function(btt) {
 
@@ -26,3 +26,4 @@ var body = document.body,
     }, false);
 
 });
+
