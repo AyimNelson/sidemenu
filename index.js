@@ -7,7 +7,6 @@ var body = document.body,
 [].forEach.call(overlayBtts, function(btt) {
 
     btt.addEventListener('click', function() {
-
         /* Detect the button class name */
         var overlayOpen = this.className === 'open-overlay';
 
