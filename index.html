@@ -100,8 +100,13 @@
             overlay = document.querySelector('.overlay'),
             overlayBtts = document.querySelectorAll('[class$="overlay"]');
 
-        [].forEach.call(overlayBtts, function(btt) {
+            (function(links){
+                [...links].forEach(link=>{
+                    link.addEventListener("click",e=>e.stopPropagation())
+                })
+            })(document.querySelectorAll(".ignore"));
 
+        [].forEach.call(overlayBtts, function(btt) {
             btt.addEventListener('click', function() {
 
                 /* Detect the button class name */
